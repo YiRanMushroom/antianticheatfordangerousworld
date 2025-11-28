@@ -1,0 +1,21 @@
+{
+  "required": true,
+  "package": "com.github.yiranmushroom.antianticheat_dangerous_world.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "AliveAndWellMainMixin",
+    "ConfigLockMixin",
+    "ModsChectMixin",
+    "MinecraftServerMixinMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  },
+  "plugin": "com.github.yiranmushroom.antianticheat_dangerous_world.mixins.ModMixinPlugin",
+  "client": [
+    "CreateWorldScreenMixin"
+  ]
+}
