@@ -11,12 +11,12 @@ public class ModMixinCanceller implements MixinCanceller {
     }
 
     private static final Set<String> MixinsToCancel = Set.of(
-            "aliveandwell.aliveandwell.mixins.aliveandwell.client.ClientPlayerInteractionManagerMixin",
+//            "aliveandwell.aliveandwell.mixins.aliveandwell.client.ClientPlayerInteractionManagerMixin",
             "aliveandwell.aliveandwell.mixins.aliveandwell.client.EditGameRulesScreenMixin",
             "aliveandwell.aliveandwell.mixins.aliveandwell.client.CreateWorldScreenMixin",
             "aliveandwell.aliveandwell.mixins.aliveandwell.client.ClientWorldPropertiesMixin",
             "aliveandwell.aliveandwell.mixins.aliveandwell.client.GameOptionsMixin",
-            "aliveandwell.aliveandwell.mixins.aliveandwell.PlayerManagerMixin",
+//            "aliveandwell.aliveandwell.mixins.aliveandwell.PlayerManagerMixin",
             "aliveandwell.aliveandwell.mixins.aliveandwell.world.LevelPropertiesMixin",
             "aliveandwell.aliveandwell.mixins.aliveandwell.world.LevelInfoMixin"
     );

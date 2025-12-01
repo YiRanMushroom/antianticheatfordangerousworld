@@ -3,7 +3,6 @@ package com.github.yiranmushroom.antianticheat_dangerous_world.mixins;
 import com.bawnorton.mixinsquared.MixinSquaredBootstrap;
 import com.bawnorton.mixinsquared.canceller.MixinCancellerRegistrar;
 import com.bawnorton.mixinsquared.platform.fabric.MixinSquaredApiImplLoader;
-import com.bawnorton.mixinsquared.platform.fabric.MixinSquaredMixinConfigPlugin;
 import org.objectweb.asm.tree.ClassNode;
 import org.spongepowered.asm.mixin.extensibility.IMixinConfigPlugin;
 import org.spongepowered.asm.mixin.extensibility.IMixinInfo;

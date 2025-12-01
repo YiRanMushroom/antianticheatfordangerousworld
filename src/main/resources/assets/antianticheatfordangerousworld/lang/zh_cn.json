@@ -1,0 +1,4 @@
+{
+    "aacfdw.loadgame.info0": "这个模组包的反作弊已被 Yiran 禁用。请不要在模组包的论坛或问题跟踪器上讨论此事。",
+    "aacfdw.tips.info0": "这个模组包的反作弊已被 Yiran 禁用。请不要在模组包的论坛或问题跟踪器上讨论此事。要禁用所有警告，请转到 config/aliveandwell.json 并将 \"renderCheatersMessage\" 设置为 false。"
+}

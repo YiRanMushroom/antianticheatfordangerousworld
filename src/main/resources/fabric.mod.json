@@ -2,16 +2,16 @@
   "schemaVersion": 1,
   "id": "antianticheatfordangerousworld",
   "version": "${version}",
-  "name": "AntiAntiCheatForDangerousWorld",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Anti-Anti-Cheat For Dangerous World",
+  "description": "This mod disables the anti-cheat mechanisms in the Dangerous World modpack, allowing players to use cheats and hacks without being detected or punished by the modpack's anti-cheat system. It is intended for use by players who want to explore the modpack's content without restrictions, or by server administrators who want to allow certain players to use cheats for testing or administrative purposes.",
   "authors": [
-    "Me!"
+    "Yiran"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com/YiRanMushroom/antianticheatfordangerousworld",
+    "sources": "https://github.com/YiRanMushroom/antianticheatfordangerousworld"
   },
-  "license": "CC0-1.0",
+  "license": "MIT",
   "icon": "assets/antianticheatfordangerousworld/icon.png",
   "environment": "*",
   "entrypoints": {

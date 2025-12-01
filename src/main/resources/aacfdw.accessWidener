@@ -1,3 +1,4 @@
 accessWidener v1 named
 
 accessible class net/minecraft/client/gui/screens/worldselection/CreateWorldScreen$SelectedGameMode
+accessible method net/minecraft/server/players/StoredUserList contains (Ljava/lang/Object;)Z

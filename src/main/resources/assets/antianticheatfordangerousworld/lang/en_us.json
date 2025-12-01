@@ -1,0 +1,4 @@
+{
+    "aacfdw.loadgame.info0": "This modpack's anti-cheat is disabled by Yiran. Please do not discuss this on the modpack's forum or issue tracker.",
+    "aacfdw.tips.info0": "This modpack's anti-cheat is disabled by Yiran. Please do not discuss this on the modpack's forum or issue tracker. To disable all warnings, go to config/aliveandwell.json and set \"renderCheatersMessage\" to false."
+}

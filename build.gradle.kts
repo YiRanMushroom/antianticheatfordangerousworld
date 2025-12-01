@@ -39,7 +39,7 @@ dependencies {
     compileOnly("com.github.bawnorton.mixinsquared:mixinsquared-fabric:0.3.7-beta.1")
     annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-fabric:0.3.7-beta.1")
     shadow(annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-fabric:0.3.7-beta.1")!!)
-
+    include(implementation(annotationProcessor("io.github.llamalad7:mixinextras-fabric:0.5.0")!!)!!)
 }
 
 tasks {
