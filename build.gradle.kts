@@ -7,6 +7,7 @@ plugins {
     `maven-publish`
     // shadow
     id("com.gradleup.shadow") version "9.2.0"
+    kotlin("jvm")
 }
 
 version = property("mod_version") as String
@@ -20,6 +21,7 @@ repositories {
     maven {
         url = uri("https://maven.bawnorton.com/releases")
     }
+    mavenCentral()
 }
 
 
@@ -40,6 +42,7 @@ dependencies {
     annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-fabric:0.3.7-beta.1")
     shadow(annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-fabric:0.3.7-beta.1")!!)
     include(implementation(annotationProcessor("io.github.llamalad7:mixinextras-fabric:0.5.0")!!)!!)
+    modImplementation("net.fabricmc:fabric-language-kotlin:1.10.8+kotlin.1.9.0")
 }
 
 tasks {
@@ -53,9 +56,8 @@ tasks {
 
     shadowJar {
         configurations = listOf(project.configurations.shadow.get())
-        archiveClassifier.set("dev-shadow") // 命名为 xxx-dev-shadow.jar
+        archiveClassifier.set("dev-shadow")
 
-        // Relocation 配置
         relocate("com.bawnorton.mixinsquared", "com.github.yiranmushroom.antianticheat_dangerous_world.mixinsquared")
         mergeServiceFiles()
     }
@@ -86,4 +88,7 @@ java {
     // if it is present.
     // If you remove this line, sources will not be generated.
     withSourcesJar()
+}
+kotlin {
+    jvmToolchain(17)
 }

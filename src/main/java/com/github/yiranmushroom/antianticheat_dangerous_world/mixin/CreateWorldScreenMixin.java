@@ -15,34 +15,34 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-@Mixin(value = CreateWorldScreen.class, priority = 1001)
+@Mixin(CreateWorldScreen.class)
 public abstract class CreateWorldScreenMixin extends Screen {
-    @Shadow
-    private CycleButton<Boolean> commandsButton;
-
-    @Shadow
-    private CycleButton<CreateWorldScreen.SelectedGameMode> modeButton;
-
-    @Shadow
-    private CycleButton<Difficulty> difficultyButton;
+//    @Shadow
+//    private CycleButton<Boolean> commandsButton;
+//
+//    @Shadow
+//    private CycleButton<CreateWorldScreen.SelectedGameMode> modeButton;
+//
+//    @Shadow
+//    private CycleButton<Difficulty> difficultyButton;
 
     protected CreateWorldScreenMixin(Component component) {
         super(component);
     }
 
-    @Inject(method = "tick", at = @At("HEAD"))
-    private void aac$removeDangerousWorldWarning(CallbackInfo ci) {
-        if (!this.modeButton.active) {
-            this.commandsButton.active = true;
-            this.modeButton.active = true;
-            this.difficultyButton.active = true;
-            this.modeButton.setValue(CreateWorldScreen.SelectedGameMode.SURVIVAL);
-            this.difficultyButton.setValue(Difficulty.NORMAL);
-        }
-    }
+//    @Inject(method = "tick", at = @At("HEAD"))
+//    private void aac$removeDangerousWorldWarning(CallbackInfo ci) {
+//        if (!this.modeButton.active) {
+//            this.commandsButton.active = true;
+//            this.modeButton.active = true;
+//            this.difficultyButton.active = true;
+//            this.modeButton.setValue(CreateWorldScreen.SelectedGameMode.SURVIVAL);
+//            this.difficultyButton.setValue(Difficulty.NORMAL);
+//        }
+//    }
 
-    @Inject(method = "init", at = @At("TAIL"))
-    private void aac$logInit(CallbackInfo ci) {
-
-    }
+//    @Inject(method = "init", at = @At("TAIL"))
+//    private void aac$logInit(CallbackInfo ci) {
+//
+//    }
 }

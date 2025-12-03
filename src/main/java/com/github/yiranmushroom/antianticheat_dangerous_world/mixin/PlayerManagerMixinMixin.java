@@ -1,6 +1,7 @@
 package com.github.yiranmushroom.antianticheat_dangerous_world.mixin;
 
 import com.bawnorton.mixinsquared.TargetHandler;
+import com.github.yiranmushroom.antianticheat_dangerous_world.AntiAntiCheatForDangerousWorld;
 import com.github.yiranmushroom.antianticheat_dangerous_world.mixins.api.ICheatConfig;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.llamalad7.mixinextras.sugar.Local;
@@ -12,6 +13,9 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.players.PlayerList;
 import net.minecraft.server.players.ServerOpList;
+import net.minecraft.world.level.LevelSettings;
+import net.minecraft.world.level.storage.PrimaryLevelData;
+import net.minecraft.world.level.storage.WorldData;
 import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -44,7 +48,7 @@ public abstract class PlayerManagerMixinMixin {
 
     @ModifyReturnValue(method = "@MixinSquared:Handler", at = @At(value = "RETURN"), remap = false)
     @TargetHandler(mixin = "aliveandwell.aliveandwell.mixins.aliveandwell.PlayerManagerMixin", name = "method_14569")
-    private boolean aac$alwaysAllowCheatTracking(boolean original, @Local(ordinal = 0, argsOnly = true)GameProfile gameProfile) {
-        return original || this.ops.contains(gameProfile) || this.server.isSingleplayerOwner(gameProfile) && this.server.getWorldData().getAllowCommands() || this.allowCheatsForAllPlayers;
+    private boolean aac$alwaysAllowCheatTracking(boolean original, @Local(ordinal = 0, argsOnly = true) GameProfile gameProfile) {
+        return original || (this.ops.contains(gameProfile) || this.server.isSingleplayerOwner(gameProfile) && this.server.getWorldData().getAllowCommands() || this.allowCheatsForAllPlayers);
     }
 }

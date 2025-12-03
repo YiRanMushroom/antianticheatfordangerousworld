@@ -10,6 +10,7 @@
     "MinecraftClientMixinMixin",
     "MinecraftServerMixinMixin",
     "ModsChectMixin",
+    "ServerPlayerEntityMixin",
     "PlayerManagerMixinMixin",
     "ServerPlayerEntityMixinMixin"
   ],
@@ -21,6 +22,7 @@
   },
   "plugin": "com.github.yiranmushroom.antianticheat_dangerous_world.mixins.ModMixinPlugin",
   "client": [
+    "AliveAndWellClientMixin",
     "CreateWorldScreenMixin",
     "DownloadingTerrainScreenMixinMixin",
     "TitleScreenMixinMixin"

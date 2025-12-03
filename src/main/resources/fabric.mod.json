@@ -16,7 +16,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.github.yiranmushroom.antianticheat_dangerous_world.AntiAntiCheatForDangerousWorld"
+      {
+        "adapter": "kotlin",
+        "value": "com.github.yiranmushroom.antianticheat_dangerous_world.AntiAntiCheatForDangerousWorld"
+      }
     ]
   },
   "mixins": [
